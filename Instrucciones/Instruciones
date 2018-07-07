@@ -1,0 +1,4 @@
+Compilar el proyecto:
+gcc nombre_archivo.cpp -o nombre_ejecutable.out
+Ejecutarlo
+./nombre_ejecutable.out
