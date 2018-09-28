@@ -1,0 +1,15 @@
+header {
+ background-image: url(./header.jpg)
+}
+header img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+mat-grid-tile {
+  background: whitesmoke;
+}
+mat-card{
+  background: rgb(1, 155, 202);
+}
