@@ -2,21 +2,35 @@
 #include <string>
 using namespace std;
  int main(){
-       string S1 = "";
-    string aux = "";
-    string espacio= "";
+     int contador=0;
+     int i=0;
+     int j=0;
+    string S1 = "";
+    string S2 = "";
+    string es = " ";
     cout << "Inserte una frase: ";
-    cin >> S1;
+    cin >> S1;    
+    S1[j] = '\0';  
     cout << endl;
     cout << "Inserte palabra a comparar: ";
-    cin >> aux;
+    cin >> S2;
 
-    for(int i=0;i<S1.size();i++){
-         cout << S1[i] << endl;
-         cout << aux << endl;
-         
 
+    for(i=0;i<S2.size();i++){
+        //cout << endl << "di una vuelta, Vuelta: " << i << endl;
+       // cout << "Leta: " << S2[i] << endl; 
+        for(j=0;j<S1.size();j++){
+            //cout << "string uno: "<< S1[j] << endl;
+        
+            if (S1[j]==S2[i]){
+                contador+=1;
+                //cout << endl << endl << endl << "Sume uno" << endl;
+                //cout << endl << "contador: " << contador << endl;
+            }   
+        }
     }
+
+    cout << endl << "coincidencias: " << contador << endl;
      return 0;
  }
  
