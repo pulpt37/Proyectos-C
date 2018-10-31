@@ -14,7 +14,8 @@ import {
   MatCardModule} from '@angular/material/';
 import {Coding} from './coding/coding.manuel';
 import { Music } from './music/music.manuel';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { Music } from './music/music.manuel';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    MatFormFieldModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatCheckboxModule,

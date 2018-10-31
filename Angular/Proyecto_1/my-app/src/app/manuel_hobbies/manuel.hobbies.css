@@ -3,8 +3,8 @@ header {
 }
 header img {
   display: block;
-  width: 150px;
-  height: 150px;
+  /* width: 150px; */
+  /* height: 150px; */
   margin: auto;
 }
 mat-grid-tile {
@@ -12,4 +12,24 @@ mat-grid-tile {
 }
 mat-card{
   background: rgb(1, 155, 202);
+}
+.formulario2{
+  border: 3px black solid;
+}
+
+
+.style_1{
+  cursor: pointer;
+}
+.style_2{
+   border: 3px black solid;
+   cursor: pointer;
+}
+.button{
+  background-color: aqua;
+  cursor: alias;
+}
+.button2{
+  background-color: red;
+  cursor: alias;
 }

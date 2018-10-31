@@ -1,14 +1,59 @@
 
         <!-- header start -->
-        <div align="center" id="header" class="section">
+        
+        <button  mat-button (click)="On()" >Click me!</button>
+        <br>
+        
+                <div align="center" id="header" class="section">
                 <header>
-                        <div ><img   src="http://bigbang.lefigaro.fr/wp-content/uploads/sites/18/2016/05/avatar.png" width="20%" height="-20%"></div> 
+                        <div ><img   src="http://bigbang.lefigaro.fr/wp-content/uploads/sites/18/2016/05/avatar.png" width="{{Ancho}}" height="{{Alto}}"></div> 
                 </header>
                  <div><mat-card><h1 style="color:#000000">Manuel Hobbies </h1> </mat-card></div>
             </div>
             <!-- header end -->
-           <mat-grid-list cols="1" rowHeight="4:1">
-                        <mat-grid-tile lang="en" style="background-color: rgb(7, 167, 241)" ><manuel-futbol > </manuel-futbol> </mat-grid-tile>
-                        <mat-grid-tile  style="background-color: rgb(149, 212, 241)" ><manuel-music></manuel-music></mat-grid-tile>
-                        <mat-grid-tile  style="background-color: rgb(185, 227, 247)" > <manuel-coding></manuel-coding></mat-grid-tile>
-                      </mat-grid-list>
+            {{Ancho}}
+            <form class="example-form">
+                <mat-form-field class="example-full-width" >
+                  <input matInput placeholder="Favorite food" class="style_2" [(ngModel)]="Nombre" name="Nombre" >
+                </mat-form-field>
+              
+               </form>
+              <button  mat-button (click)="Hola()" class="{{this.estilo_boton}}">Click me!</button>
+              <br>
+              
+              <form class="ancho_">
+                <mat-form-field class="example-full-width" >
+                  <input type= "number" matInput placeholder="Ancho" class="style_2" [(ngModel)]="Ancho" name="Ancho" >
+                </mat-form-field>
+                </form>
+                <br>
+                <form class="alto_">
+                        <mat-form-field class="example-full-width" >
+                          <input type= "number" matInput placeholder="Alto" class="style_2" [(ngModel)]="Alto" name="Alto" >
+                        </mat-form-field>
+              </form>
+              
+              
+              <div class="formulario2">
+                  <h4>Basic native select</h4>
+                  <mat-form-field>
+                      <select matNativeControl required>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </mat-form-field>
+              </div>
+              
+              
+              <div class="formulario3">
+                <mat-form-field>
+                  <input matInput value="Disco party!" placeholder="Message" #message>
+                </mat-form-field>
+                
+                <mat-form-field>
+                  <input matInput value="Dance" placeholder="Action" #action>
+                </mat-form-field>
+                
+                <button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button></div>

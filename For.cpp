@@ -2,7 +2,7 @@
 
 int main (){
     int i =0;
-    int a = 1;
+    int a ;
     int b = 1;
     int c = 0;
     int can_num = 0;
@@ -40,7 +40,7 @@ int main (){
         printf("\n%d",a);
     }
     */
-    a=6%3;
+    
     printf("\nresiduo: ");
     printf("%d",a);
 
