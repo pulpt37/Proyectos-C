@@ -1,6 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
+
+export interface Student{
+  nombre: string,
+  edad:number,
+  genero: string,
+  
+}
 
 @Component({
   selector: 'manuel-hobbies',
@@ -8,30 +15,31 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./manuel.hobbies.css']
 })
 export class ManuelHobbies {
- title="Fer";
- Nombre="Fernando";
- Alto="20%";
- Ancho="20%";
- estilo_boton:String="button";
- on:boolean=true;
- On(){
-  if (this.on){
-    this.on=false;
-  }else{
-    this.on=true;
-  }
-}
+  
+  estudiante:Student={
+    nombre:"fer",
+    edad:15,
+    genero:"Masculino"
+  };
 
- 
- Hola(){
-   
-   if(this.estilo_boton=="button"){
-      this.estilo_boton="button2";
-     console.log(this.estilo_boton);  
+  // estudiantes:Student[]=[];
+  
+  numero:number=0;
+
+
+  vector:Student[]=[];
+
+
+  Fer(){
+   console.log("Vector");
+   if(this.vector.length>5){
+    this.vector.splice(3,0,this.estudiante);
    }else{
-       
-       this.estilo_boton="button";
-       console.log(this.estilo_boton);  
+    this.vector.push(this.estudiante);
+   }
+   
+
+   console.log(this.vector);
+   console.log(this.vector[0].nombre)
   }
- }
 }
