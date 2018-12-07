@@ -27,19 +27,28 @@ export class ManuelHobbies {
   numero:number=0;
 
 
-  vector:Student[]=[];
+  vector:boolean[]=[];
+  vector_numeros:number[]=[5,6,6,12,-2];
 
 
   Fer(){
-   console.log("Vector");
-   if(this.vector.length>5){
-    this.vector.splice(3,0,this.estudiante);
-   }else{
-    this.vector.push(this.estudiante);
-   }
-   
-
-   console.log(this.vector);
-   console.log(this.vector[0].nombre)
+    let aux;
+    for(let i=0;i<this.vector_numeros.length;i++){
+      console.log("El vector vale: " +this.vector_numeros[i]);
+      aux=this.vector_numeros[i];
+      console.log("El auxiliar vale: " +aux);
+      console.log("El vector numeros en su posicion " + aux +  " Vale: " + this.vector[aux]);
+      
+      if(this.vector[aux]==true){
+        console.log("Hay repetidos");
+        console.log("Vueltas: " + (i+1));
+        break;
+      }else{
+        this.vector[aux]=true;
+      }
+    
+      
+      
+    }
   }
 }
